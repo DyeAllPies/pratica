@@ -4,10 +4,11 @@
 FROM python:3.11-slim-bullseye
 WORKDIR /app
 
+# MODE defaults to cloud; override it to 'local' at run time.
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PORT=8080 \
-    MODE=cloud   # default mode (can be overridden to 'local')
+    MODE=cloud
 
 # ============================================
 # Stage 2 — OS + Python dependencies
